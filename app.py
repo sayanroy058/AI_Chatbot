@@ -1,9 +1,8 @@
 import streamlit as st
 from g4f.client import Client
-import openai
+import google.generativeai as genai
 
-# API Key should be secured and not exposed in the script
-openai.api_key = st.secrets["AIzaSyC3BAuvhsr96v9FN1HKPmMoAMUcTYfcwFM"]
+genai.configure(api_key=os.getenv("AIzaSyC3BAuvhsr96v9FN1HKPmMoAMUcTYfcwFM"))
 client = Client()
 
 def generate_writing_prompt(user_input, model_version="gpt-3.5-turbo", max_tokens=150):
