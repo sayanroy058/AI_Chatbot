@@ -1,6 +1,7 @@
 import streamlit as st
 from g4f.client import Client
 import google.generativeai as genai
+import os
 
 genai.configure(api_key=os.getenv("AIzaSyC3BAuvhsr96v9FN1HKPmMoAMUcTYfcwFM"))
 client = Client()
