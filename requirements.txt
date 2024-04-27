@@ -1,3 +1,4 @@
 g4f
 streamlit
 openai
+google-generativeai
