@@ -8,8 +8,7 @@ client = Client()
 # Define the function for generating creative writing prompts
 def generate_writing_prompt(user_input):
     response = client.chat.completions.create(
-        model="gpt-4-32k-0613",
-        provider=g4f.Provider.Bing,
+        model="gpt-3.5-turbo",
         messages=[{"role": "user", "content": user_input}],
     )
     return response.choices[0].message.content
